@@ -18,8 +18,8 @@ We extend the SAC algorithm implementation in [Miguel Morales (@mimoralea)](http
 
 To answer the two questions above, we run a series of numerical experiments of training the SAC algorithm with independent and dependent stochastic actions. In the both cases, in order to obtain comparable numerical results, we use the same random seed for the trainging process. The training ends when the agent achieves a moving average of 1500 across the previous 100 episodes. 
 
-![Figure 1](https://github.com/NikolayGudkov/Some-analysis-of-the-Soft-Actor-Critic-algorithm/blob/main/SAC_plus_1.png)
+![Figure 1](https://github.com/NikolayGudkov/On-the-mutual-dependence-of-stochastic-actions-in-the-Soft-Actor-Critic-algorithm/blob/main/Hopper_dependent_independent_actions.png)
 
 
-From 
+From the figure above, we note that the SAC agent with dependent stochastic actions solves the environment substantially faster than the counterpart with independent actions. It takes the first agent less than 600 episodes to achieve the training target, while the second agent needs around 1000 episodes. Partially, this observation can be explained by the fact that the former agent seeks the optimal policy in a set of more parametrized Gaussian distributions. This set provides more flexible learning policies and allows the agent to perform better than the agent, whose actions are forces to be independent.
 
